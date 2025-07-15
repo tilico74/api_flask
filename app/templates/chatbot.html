@@ -1,0 +1,57 @@
+{% extends "modelo.html" %}
+
+{% block title %}Chatbot PJP{% endblock %}
+
+
+{% block content %}
+<h1 class="text-center text-white mb-4">Chatbot</h1>
+
+<div class="container-fluid">
+    <div class="row justify-content-center py-4 text-white" style="min-height: 75vh;">
+
+        <div class="col-12 col-md-10 col-lg-8">
+
+            <!-- Área de Resposta -->
+            <div class="border border-secondary-subtle rounded overflow-auto bg-black p-3" style="height: 60vh;"
+                id="resposta">
+                Olá, sou o chatbot auxiliar do Programa Jovem Programador...
+            </div>
+
+            <!-- Campo de Pergunta -->
+            <div class="pt-3">
+                <div class="input-group">
+                    <input type="text" class="form-control bg-black text-white" id="pergunta"
+                        placeholder="Digite sua pergunta...">
+                    <button class="btn btn-primary border-white" onclick="enviarPergunta()">Perguntar</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+<script>
+    async function enviarPergunta() {
+        const pergunta = document.getElementById("pergunta").value;
+        const respostaDiv = document.getElementById("resposta");
+        respostaDiv.textContent = "Carregando resposta...";
+
+        try {
+            const response = await fetch("/pergunta/", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ pergunta: pergunta })
+            });
+
+            const data = await response.json();
+            respostaDiv.textContent = data.resposta || data.erro;
+        } catch (error) {
+            respostaDiv.textContent = "Erro ao enviar pergunta: " + error;
+        }
+    }
+</script>
+{% endblock %}
