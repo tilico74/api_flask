@@ -2,65 +2,101 @@
 {% block title %}Desenvolvedor{% endblock %}
 
 {% block content %}
-<h1 class="text-center text-white mb-4">Desenvolvedor</h1>
 
-<div class="container text-white text-center">
-    <!-- Foto e nome -->
-    <img src="{{ url_for('static', filename='img/foto_nelson.png') }}" class="rounded-circle mb-3" width="220"
-        height="220" alt="Foto de perfil">
-    <h2>Nelson Santos Cristiano Jucoski</h2>
-    <p class="text-muted">Desenvolvedor backend e frontend com foco em soluções web inteligentes, apaixonado por
-        tecnologia, inovação e código limpo.</p>
 
-    <!-- Skills -->
-    <h4 class="mt-4">Skills</h4>
-    <div class="d-flex flex-wrap justify-content-center gap-4 my-3">
-        <div><img src="{{ url_for('static', filename='icons/html5.svg') }}" width="80"
-                style="filter: invert(46%) sepia(76%) saturate(300%) hue-rotate(180deg);">
-            <p>HTML</p>
-        </div>
-        <div><img src="{{ url_for('static', filename='icons/java.svg') }}" width="80"
-                style="filter: invert(46%) sepia(76%) saturate(300%) hue-rotate(180deg);">
-            <p>Java</p>
-        </div>
-        <div><img src="{{ url_for('static', filename='icons/spring.svg') }}" width="80"
-                style="filter: invert(46%) sepia(76%) saturate(300%) hue-rotate(180deg);">
-            <p>SpringBoot</p>
-        </div>
-        <div><img src="{{ url_for('static', filename='icons/python.svg') }}" width="80"
-                style="filter: invert(46%) sepia(76%) saturate(300%) hue-rotate(180deg);">
-            <p>Python</p>
-        </div>
-        <div><img src="{{ url_for('static', filename='icons/javascript.svg') }}" width="80"
-                style="filter: invert(46%) sepia(76%) saturate(300%) hue-rotate(180deg);">
-            <p>JavaScript</p>
-        </div>
-        <div><img src="{{ url_for('static', filename='icons/php.svg') }}" width="80"
-                style="filter: invert(46%) sepia(76%) saturate(300%) hue-rotate(180deg);">
-            <p>PHP</p>
-        </div>
-        <div><img src="{{ url_for('static', filename='icons/css3.svg') }}" width="80"
-                style="filter: invert(46%) sepia(76%) saturate(300%) hue-rotate(180deg);">
-            <p>CSS3</p>
-        </div>
-        <div><img src="{{ url_for('static', filename='icons/bootstrap.svg') }}" width="80"
-                style="filter: invert(46%) sepia(76%) saturate(300%) hue-rotate(180deg);">
-            <p>Bootstrap</p>
-        </div>
-    </div>
+<div class="container py-5">
+    <div class="text-white p-4">
 
-    <!-- Contato -->
-    <h4 class="mt-5">Contato</h4>
-    <div class="d-flex justify-content-center gap-4 my-3">
-        <a href="https://www.linkedin.com/in/seu-perfil" target="_blank" class="text-white text-decoration-none">
-            <i class="bi bi-linkedin fs-3"></i>
-        </a>
-        <a href="https://wa.me/5599999999999" target="_blank" class="text-white text-decoration-none">
-            <i class="bi bi-whatsapp fs-3"></i>
-        </a>
-        <a href="mailto:seuemail@example.com" class="text-white text-decoration-none">
-            <i class="bi bi-envelope fs-3"></i>
-        </a>
+        <h1 class="text-center mb-4">Desenvolvedor</h1>
+
+        <section class="mb-5">
+            <div class="row">
+                <div class="col-4">
+                    <img src="{{ url_for('static', filename='img/foto_nelson.png') }}"
+                        class="rounded-circle mb-3 border border-5" width="300" height="300" alt="Foto de perfil">
+                </div>
+                <div class="col-8 p-4">
+                    <h2 class="text-warning">Nelson Santos Cristiano Jucoski</h2>
+                    <p>Desenvolvedor backend e frontend com foco em soluções web inteligentes,
+                        apaixonado por
+                        tecnologia, inovação e código limpo.
+                    </p>
+                </div>
+
+            </div>
+
+
+        </section>
+
+        <section class="mb-5">
+            <h4 class="text-warning">Hard Skills</h4>
+            <div class="d-flex flex-wrap justify-content-center gap-5 my-3 text-center">
+                <div><img src="{{ url_for('static', filename='icons/html5.svg') }}" width="80"
+                        style="filter: invert(46%) sepia(76%) saturate(300%) hue-rotate(180deg);">
+                    <p>HTML</p>
+                </div>
+                <div><img src="{{ url_for('static', filename='icons/java.svg') }}" width="80"
+                        style="filter: invert(46%) sepia(76%) saturate(300%) hue-rotate(180deg);">
+                    <p>Java</p>
+                </div>
+                <div><img src="{{ url_for('static', filename='icons/spring.svg') }}" width="80"
+                        style="filter: invert(46%) sepia(76%) saturate(300%) hue-rotate(180deg);">
+                    <p>SpringBoot</p>
+                </div>
+                <div><img src="{{ url_for('static', filename='icons/python.svg') }}" width="80"
+                        style="filter: invert(46%) sepia(76%) saturate(300%) hue-rotate(180deg);">
+                    <p>Python</p>
+                </div>
+                <div><img src="{{ url_for('static', filename='icons/javascript.svg') }}" width="80"
+                        style="filter: invert(46%) sepia(76%) saturate(300%) hue-rotate(180deg);">
+                    <p>JavaScript</p>
+                </div>
+                <div><img src="{{ url_for('static', filename='icons/php.svg') }}" width="80"
+                        style="filter: invert(46%) sepia(76%) saturate(300%) hue-rotate(180deg);">
+                    <p>PHP</p>
+                </div>
+                <div><img src="{{ url_for('static', filename='icons/css3.svg') }}" width="80"
+                        style="filter: invert(46%) sepia(76%) saturate(300%) hue-rotate(180deg);">
+                    <p>CSS3</p>
+                </div>
+                <div><img src="{{ url_for('static', filename='icons/bootstrap.svg') }}" width="80"
+                        style="filter: invert(46%) sepia(76%) saturate(300%) hue-rotate(180deg);">
+                    <p>Bootstrap</p>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="mb-5">
+            <h4 class="text-warning">Contato</h4>
+            <div class="d-flex justify-content-center gap-5 my-3 text-center">
+                <a href="https://www.linkedin.com/in/nelson-cristiano-santos-jucoski-260900215/" target="_blank"
+                    class="text-white text-decoration-none">
+                    <i class="bi bi-linkedin fs-1"
+                        style="filter: invert(46%) sepia(76%) saturate(300%) hue-rotate(180deg);"></i>
+                    <p>Linkedin</p>
+
+                </a>
+                <a href="https://github.com/tilico74" target="_blank" class="text-white text-decoration-none">
+                    <i class="bi bi-github fs-1"
+                        style="filter: invert(46%) sepia(76%) saturate(300%) hue-rotate(180deg);"></i>
+                    <p>Github</p>
+
+                </a>
+                <a href="https://wa.me/5548984799374" target="_blank" class="text-white text-decoration-none">
+                    <i class="bi bi-whatsapp fs-1"
+                        style="filter: invert(46%) sepia(76%) saturate(300%) hue-rotate(180deg);"></i>
+                    <p>WhatsApp</p>
+                </a>
+                <a href="mailto:nelson.cristiano74@gmail.com" class="text-white text-decoration-none">
+                    <i class="bi bi-envelope fs-1"
+                        style="filter: invert(46%) sepia(76%) saturate(300%) hue-rotate(180deg);"></i>
+                    <p>E-mail</p>
+                </a>
+            </div>
+        </section>
+        <!-- Contato -->
+
     </div>
 </div>
 {% endblock %}

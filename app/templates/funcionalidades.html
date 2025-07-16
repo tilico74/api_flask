@@ -1,0 +1,77 @@
+{% extends "modelo.html" %}
+
+{% block title %}Funcionalidades - Chatbot PJP{% endblock %}
+
+{% block content %}
+
+
+<div class="container py-5">
+    <div class="text-white p-4">
+        <h1 class="text-center mb-4">Funcionalidades Obrigatórias</h1>
+
+        <section class="mb-5">
+            <h4 class="mb-4 text-warning">1º Projeto Integrador - Back-end</h4>
+            <ul class="list-group list-group-flush">
+
+                <li class="list-group-item bg-transparent text-white border-secondary">
+                    <p>✅ API para envio de perguntas e recebimento de respostas.</p>
+                    <p>Desenvolvida na linguagem PYTHON com Flask pela sua leveza, simplicidade e robustez, permitindo
+                        integração eficiente
+                        com
+                        front-end ou outros sistemas.</p>
+                </li>
+
+                <li class="list-group-item bg-transparent text-white border-secondary">
+                    <p>✅ Módulo de leitura do conteúdo do site (crawler ou leitura de texto salvo).</p>
+                    <p>Foi utilizada a biblioteca <strong>BeautifulSoup</strong> para realizar a raspagem do conteúdo do
+                        site
+                        oficial do programa Jovem Programador.</p>
+                </li>
+
+                <li class="list-group-item bg-transparent text-white border-secondary">
+                    <p>✅ Módulo de compressão e filtragem do conteúdo. <strong class="badge text-bg-info">
+                            Extra</strong>
+                    </p>
+                    <p>Utilizamos técnicas de deduplicação semântica com embeddings <strong>HuggingFace</strong> e
+                        cálculo
+                        de
+                        similaridade com <strong>cosine_similarity</strong>, removendo conteúdos repetidos antes da
+                        vetorização.
+                    </p>
+                </li>
+
+                <li class="list-group-item bg-transparent text-white border-secondary">
+                    <p>✅ Módulo de interpretação de perguntas (busca inteligente no conteúdo).</p>
+                    <p>Empregamos inteligência artificial com os modelos <strong>Groq (LLaMA 3)</strong> e
+                        <strong>Gemini</strong>, além de indexação vetorial com <strong>FAISS</strong> para recuperação
+                        inteligente de informações.
+                    </p>
+                </li>
+
+                <li class="list-group-item bg-transparent text-white border-secondary">
+                    <p>✅ Módulo de resposta automática.</p>
+                    <p>A IA responde automaticamente com base no contexto vetorizado, sem a necessidade de cadastro
+                        manual
+                        de
+                        perguntas e respostas, garantindo flexibilidade e precisão.</p>
+                </li>
+
+                <li class="list-group-item bg-transparent text-white border-secondary">
+                    <p>✅ Mensagem padrão caso a informação não seja encontrada.</p>
+                    <p>O sistema é capaz de identificar quando não há contexto suficiente e retorna uma mensagem clara
+                        informando que a resposta não foi localizada, evitando respostas falsas ou inventadas.</p>
+                </li>
+
+                <li class="list-group-item bg-transparent text-white border-secondary">
+                    <p>✅ Código documentado e organizado.</p>
+                    <p>O código segue boas práticas de desenvolvimento e está disponível publicamente no GitHub:</p>
+                    <a href="https://github.com/tilico74/api_flask.git" class="text-info" target="_blank">
+                        Repositório da API no GitHub
+                    </a>
+                </li>
+
+            </ul>
+        </section>
+    </div>
+</div>
+{% endblock %}

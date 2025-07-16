@@ -1,12 +1,40 @@
 :root {
-    --cor-fundo: #0A192F;
+    --cor-fundo: #15263d;
     --cor-destaque: #00FFF5;
     --cor-acao: #FF1F8F;
     --cor-texto: #F8F9FA;
     --cor-texto-secundario: #8892B0;
+
 }
 
 body {
     background-color: var(--cor-fundo);
     color: var(--cor-texto);
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Banner padrão com imagem de fundo */
+.banner {
+    background-image: url("../static/img/banner.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    /* você pode ajustar conforme necessário */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Texto com sombra para contraste */
+.banner h1 {
+    font-size: 6rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.main {
+    margin-top: 60px;
 }

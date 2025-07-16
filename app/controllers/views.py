@@ -4,7 +4,11 @@ views_bp = Blueprint("views", __name__)
 
 @views_bp.route("/home")
 def home():
-    return render_template("home.html")
+    return render_template("home.html", banner_home= True)
+
+@views_bp.route("/funcionalidades")
+def funcionalidades():
+    return render_template("funcionalidades.html")
 
 @views_bp.route("/chatbot")
 def chatbot():

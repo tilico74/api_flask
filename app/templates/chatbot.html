@@ -4,26 +4,29 @@
 
 
 {% block content %}
-<h1 class="text-center text-white mb-4">Chatbot</h1>
+<div class="container py-4">
+    <div class="text-white">
+        <h1 class="text-center text-white mb-4">Chatbot</h1>
 
-<div class="container-fluid">
-    <div class="row justify-content-center py-4 text-white" style="min-height: 75vh;">
+        <div class="row justify-content-center py-2 text-white" style="min-height: 75vh;">
 
-        <div class="col-12 col-md-10 col-lg-8">
+            <div class="col-12 col-md-10 col-lg-10">
 
-            <!-- Área de Resposta -->
-            <div class="border border-secondary-subtle rounded overflow-auto bg-black p-3" style="height: 60vh;"
-                id="resposta">
-                Olá, sou o chatbot auxiliar do Programa Jovem Programador...
-            </div>
-
-            <!-- Campo de Pergunta -->
-            <div class="pt-3">
-                <div class="input-group">
-                    <input type="text" class="form-control bg-black text-white" id="pergunta"
-                        placeholder="Digite sua pergunta...">
-                    <button class="btn btn-primary border-white" onclick="enviarPergunta()">Perguntar</button>
+                <!-- Área de Resposta -->
+                <div class="border border-secondary-subtle rounded overflow-auto p-3" style="height: 60vh;"
+                    id="resposta">
+                    Olá, sou o chatbot auxiliar do Programa Jovem Programador...
                 </div>
+
+                <!-- Campo de Pergunta -->
+                <div class="pt-3">
+                    <div class="input-group">
+                        <input type="text" class="form-control bg-white text-white" id="pergunta"
+                            placeholder="Digite sua pergunta..." style="--bs-bg-opacity: .6;">
+                        <button class="btn btn-primary border-white" onclick="enviarPergunta()">Perguntar</button>
+                    </div>
+                </div>
+
             </div>
 
         </div>

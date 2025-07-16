@@ -1,12 +1,154 @@
 {% extends "modelo.html" %}
 
-{% block title %}Chatbot PJP{% endblock %}
-
+{% block title %}Especificação de Requisitos - Chatbot PJP{% endblock %}
 
 {% block content %}
-<h1 class="text-center text-white mb-4">Requisitos</h1>
 
-<div class="container-fluid">
+<div class="container py-5">
+    <div class="text-white p-4">
 
+        <h1 class="text-center mb-4">Especificação de Requisitos</h1>
+        <p class="text-end text-muted fst-italic">Versão 1.0</p>
+
+        <section class="mb-5">
+            <h4 class="text-warning">Objetivo do Documento</h4>
+            <p>
+                Este documento descreve os requisitos funcionais e não funcionais do sistema <strong>Chatbot
+                    PJP</strong>, com o objetivo de orientar o desenvolvimento e garantir que o software atenda às
+                necessidades dos usuários e às expectativas dos envolvidos.
+            </p>
+        </section>
+
+        <section class="mb-5">
+            <h4 class="text-warning">Público-alvo</h4>
+            <p>
+                Estudantes do programa Jovem Programador, professores, desenvolvedores envolvidos no projeto integrador
+                e usuários interessados em tirar dúvidas sobre o programa através do chatbot.
+            </p>
+        </section>
+
+        <section class="mb-5">
+            <h4 class="text-warning">Definições e Siglas</h4>
+            <table class="table table-bordered bg-transparent table-sm">
+                <thead>
+                    <tr class="bg-transparent">
+                        <th class="bg-transparent text-white"></th>
+                        <th class="bg-transparent text-white">Sigla</th>
+                        <th class="bg-transparent text-white">Definição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="bg-transparent">
+                        <td class="bg-transparent text-white">1</td>
+                        <td class="bg-transparent text-white">IA</td>
+                        <td class="bg-transparent text-white">Inteligência Artificial</td>
+                    </tr>
+                    <tr>
+                        <td class="bg-transparent text-white">2</td>
+                        <td class="bg-transparent text-white">API</td>
+                        <td class="bg-transparent text-white">Interface de Programação de Aplicações</td>
+                    </tr>
+                    <tr>
+                        <td class="bg-transparent text-white">3</td>
+                        <td class="bg-transparent text-white">FAISS</td>
+                        <td class="bg-transparent text-white">Facebook AI Similarity Search (busca vetorial)</td>
+                    </tr>
+                    <tr>
+                        <td class="bg-transparent text-white">4</td>
+                        <td class="bg-transparent text-white">PI</td>
+                        <td class="bg-transparent text-white">Projeto Integrador</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="mb-5">
+            <h4 class="text-warning">Envolvidos</h4>
+            <table class="table table-bordered table-sm">
+                <thead>
+                    <tr>
+                        <th class="bg-transparent text-white"></th>
+                        <th class="bg-transparent text-white">Nome</th>
+                        <th class="bg-transparent text-white">Função</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="bg-transparent text-white">1</td>
+                        <td class="bg-transparent text-white">Nelson Cristiano Jucoski (Tilico)</td>
+                        <td class="bg-transparent text-white">Desenvolvedor / Responsável Técnico</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="mb-5">
+            <h4 class="text-warning">Prioridade dos Requisitos</h4>
+            <p><strong>Essencial:</strong> O sistema não funciona sem este requisito.</p>
+            <p><strong>Importante:</strong> O sistema funciona, mas de forma limitada sem este requisito.</p>
+            <p><strong>Desejável:</strong> Pode ser implementado em versões futuras, sem prejudicar o funcionamento
+                atual.</p>
+        </section>
+
+        <section class="mb-5">
+            <h4 class="text-warning">Requisitos Funcionais</h4>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item bg-transparent text-white border-secondary">
+                    <strong class="text-info">RF01:</strong> O sistema deve permitir o envio de perguntas e exibir
+                    respostas automáticas
+                    via IA. <br>
+                    <em>Prioridade: Essencial</em>
+                </li>
+                <li class="list-group-item bg-transparent text-white border-secondary">
+                    <strong class="text-info">RF02:</strong> O sistema deve utilizar raspagem de dados para obter
+                    informações do site do
+                    Jovem Programador.<br>
+                    <em>Prioridade: Essencial</em>
+                </li>
+                <li class="list-group-item bg-transparent text-white border-secondary">
+                    <strong class="text-info">RF03:</strong> O sistema deve exibir uma resposta padrão caso não encontre
+                    a informação.<br>
+                    <em>Prioridade: Importante</em>
+                </li>
+            </ul>
+        </section>
+
+        <section class="mb-5">
+            <h4 class="text-warning">Requisitos Não Funcionais</h4>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item bg-transparent text-white border-secondary">
+                    <strong class="text-info">RNF01:</strong> O tempo médio de resposta do chatbot deve ser inferior a 5
+                    segundos.<br>
+                    <em>Prioridade: Desejável</em>
+                </li>
+                <li class="list-group-item bg-transparent text-white border-secondary">
+                    <strong class="text-info">RNF02:</strong> O sistema deve ser acessível por celular e computador.<br>
+                    <em>Prioridade: Desejável</em>
+                </li>
+                <li class="list-group-item bg-transparent text-white border-secondary">
+                    <strong class="text-info">RNF03:</strong> O sistema deve estar disponível para consulta 24h por dia,
+                    com exceção de
+                    manutenções programadas.<br>
+                    <em>Prioridade: Desejável</em>
+                </li>
+            </ul>
+        </section>
+
+        <section class="mb-5">
+            <h4 class="text-warning">Critérios de Aceitação</h4>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item bg-transparent text-white border-secondary">
+                    ✅ O chatbot responde perguntas reais com base no conteúdo do site Jovem Programador.
+                </li>
+                <li class="list-group-item bg-transparent text-white border-secondary">
+                    ✅ O tempo médio de resposta está abaixo de 5 segundos.
+                </li>
+                <li class="list-group-item bg-transparent text-white border-secondary">
+                    ✅ A aplicação funciona corretamente tanto em dispositivos móveis quanto em desktops.
+                </li>
+            </ul>
+        </section>
+    </div>
 </div>
+
 {% endblock %}

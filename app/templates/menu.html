@@ -1,23 +1,32 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">EquipeNiko</a>
+<nav class="navbar navbar-expand-lg fixed-top" data-bs-theme="ligth"
+    style="background-color: oklab(80% -0.0028 0.16074); color: var(--cor-fundo);">
+    <div class=" container-fluid">
+        <a class="navbar-brand" href="{{ url_for('views.home') }}">EquipeNiko</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
+            <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{{ url_for('views.home') }}">Home</a>
+                    <a class="nav-link active" aria-current="page" href="{{ url_for('views.home') }}"><i
+                            class="bi bi-house-door"></i> Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('views.requisitos') }}">Requisitos</a>
+                    <a class="nav-link" href="{{ url_for('views.funcionalidades') }}"><i class="bi bi-gear"></i>
+                        Funcionalidades</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('views.desenvolvedor') }}">Desenvolvedor</a>
+                    <a class="nav-link" href="{{ url_for('views.requisitos') }}"><i class="bi bi-clipboard2-check"></i>
+                        Requisitos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('views.chatbot') }}">Chatbot</a>
+                    <a class="nav-link" href="{{ url_for('views.desenvolvedor') }}"><i class="bi bi-keyboard"></i>
+                        Desenvolvedor</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('views.chatbot') }}"><i class="bi bi-chat-text"></i>
+                        Chatbot</a>
                 </li>
 
         </div>
