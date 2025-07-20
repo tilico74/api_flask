@@ -90,24 +90,24 @@ api_flask/
 4. **Busca e Resposta**: A pergunta é vetorizada e comparada com o conteúdo, e a IA responde com base no contexto.
 
 ---
-# 🔹 Variáveis de ambiente do projeto Flask com IA
+## 🔹 Variáveis de ambiente do projeto Flask com IA
 
 Para que o projeto funcione corretamente.
 
 Crie um arquivo `.env` na raiz do projeto:
 
-# Chave de API da Groq (utilizada pela LLM LLaMA3)
+## Chave de API da Groq (utilizada pela LLM LLaMA3)
 GROQ_API_KEY=coloque_sua_chave_groq_aqui
 link para criação: https://console.groq.com/keys
 
-# Chave de API do Google Gemini (utilizada para IA generativa)
+## Chave de API do Google Gemini (utilizada para IA generativa)
 GOOGLE_API_KEY=coloque_sua_chave_google_gemini_aqui
 link para criação: https://makersuite.google.com/app/apikey
 
-# Variável de ambiente
+## Variável de ambiente
 URL_JOVEM_PROGRAMADOR=https://jovemprogramador.com.br/
 
-# Variável de ambiente
+## Variável de ambiente
 USER_AGENT=projetoIntegrador/1.0 (+https://github.com/EquipeNACtion/projetoIntegrador.git)
 
 ---
