@@ -108,7 +108,7 @@ link para criação: https://makersuite.google.com/app/apikey
 URL_JOVEM_PROGRAMADOR=https://jovemprogramador.com.br/
 
 ## Variável de ambiente
-USER_AGENT=projetoIntegrador/1.0 (+https://github.com/EquipeNACtion/projetoIntegrador.git)
+USER_AGENT=projetoIntegrador/1.0 (+https://github.com/SEU_GITHUB/api_flask.git)
 
 ---
 ## 🔹 Como executar localmente
