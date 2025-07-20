@@ -2,6 +2,8 @@ from flask import Blueprint, render_template
 
 views_bp = Blueprint("views", __name__)
 
+
+@views_bp.route("/")
 @views_bp.route("/home")
 def home():
     return render_template("home.html", banner_home= True)

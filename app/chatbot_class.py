@@ -53,7 +53,7 @@ class JovemProgramadorChatbot:
         )
         
         self.embeddings = HuggingFaceEmbeddings(
-            model_name="sentence-transformers/all-MiniLM-L6-v2",
+            model_name="intfloat/e5-small",#sentence-transformers/all-MiniLM-L6-v2
             model_kwargs={'device': 'cpu'},
             encode_kwargs={'normalize_embeddings': True}
         )
@@ -201,8 +201,8 @@ class JovemProgramadorChatbot:
     def _split_documents(self, documentos: List[Document]) -> List[Document]:
         """Divide documentos em chunks."""
         splitter = RecursiveCharacterTextSplitter(
-            chunk_size=2000,
-            chunk_overlap=300,
+            chunk_size=500,
+            chunk_overlap=200,
             separators=["\n\n", "\n", ". ", "? ", "! ", " ", ""],
             length_function=len,
             is_separator_regex=False
@@ -312,7 +312,7 @@ class JovemProgramadorChatbot:
         retriever = self.vectorstore.as_retriever(
             search_type="mmr",
             search_kwargs={
-                "k": 6,
+                "k": 3,
                 "score_threshold": 0.7,
                 "fetch_k": 20
             }
