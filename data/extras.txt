@@ -10,33 +10,28 @@ https://www.tiktok.com/@jovemprogramador_sc
 
 Confira os telefones disponíveis por cidade onde tem unidades do Programa Jovem Programador são Unidades do Senac/SC
 
-📍 Região Sul de Santa Catarina:
-
+Região Sul de Santa Catarina:
 Araranguá: (48) 3522-1192
 Biguaçu: (48) 3292-3203
 Criciúma: (48) 3437-9801
 Tubarão: (48) 3621-0055
 
-📍 Região da Grande Florianópolis - Santa Catarina
-
+Região da Grande Florianópolis - Santa Catarina
 Florianópolis: (48) 3229-3200
 Palhoça: (48) 3229-5100
 
-📍 Região do Vale do Itajaí - Santa Catarina
-
+Região do Vale do Itajaí - Santa Catarina
 Blumenau: (47) 3035-9999
 Brusque: (47) 3351-2626
 Itajaí: (47) 3341-6666
 Rio do Sul: (47) 3521-2065
 
-📍 Região Norte e Nordeste - Santa Catarina
-
+Região Norte e Nordeste - Santa Catarina
 Jaraguá do Sul: (47) 3275-8400
 Joinville: (47) 3431-6666
 São Bento do Sul: (47) 3621-0055
 
-📍 Região Serrana e Meio-Oeste - Santa Catarina
-
+Região Serrana e Meio-Oeste - Santa Catarina
 Lages: (49) 3289-2066
 São Joaquim: (49) 3231-0006
 Videira: (49) 3566-0199
@@ -47,8 +42,7 @@ Campos Novos: (49) 3541-2100
 Joaçaba: (49) 3521-0066
 Xanxerê: (49) 3433-3300
 
-📍 Oeste e Extremo-Oeste - Santa Catarina
-
+Oeste e Extremo-Oeste - Santa Catarina
 Chapecó: (49) 3361-5099
 Concórdia: (49) 3442-2993
 São Miguel do Oeste: (49) 3621-0055
@@ -57,5 +51,11 @@ Canoinhas: (49) 3622-4283
 
 Linguagens de Programação nas Unidades
 As linguagens de programação ensinadas em cada unidade serão definidas conforme as necessidades das empresas locais e a demanda por profissionais de tecnologia em cada região.
-
 Na unidade de Palhoça, a linguagem ensinada em 2025 será Python.
+
+Informações sobre Seprosc:
+Site: https://www.seprosc.com.br/
+Endereço: Rua Antônio Treis, 607, Vorstadt - 89015-400 - Blumenau/SC
+E-mail: seprosc@seprosc.com.br
+Telefone: (47) 3037-4932
+Horário de atendimento: Segunda à sexta das 8h às 12h e das 13h30 às 18h

@@ -335,43 +335,22 @@ class JovemProgramadorChatbot:
         self.fallback_chain = groq_chain.with_fallbacks([gemini_chain])
         return self.fallback_chain
 
-    def chat(self, question: str, use_cache: bool = True) -> str:
-        """Processa uma pergunta do usuário."""
+    
+    def chat(self, question: str) -> str:
+        
         if not question.strip():
             return "Por favor, faça uma pergunta sobre o Jovem Programador."
-            
-        question_hash = hashlib.md5(question.lower().encode()).hexdigest()
-        cache_file = self.cache_dir / f"{question_hash}.json"
-        
-        if use_cache and cache_file.exists():
-            try:
-                with open(cache_file, 'r') as f:
-                    cached = json.load(f)
-                    if time.time() - cached['timestamp'] < 86400:
-                        return cached['response']
-            except:
-                pass
-                
-        try:
-            start_time = time.time()
-            response = self.chain.invoke(question)
-            elapsed = time.time() - start_time
-            
-            with open(cache_file, 'w') as f:
-                json.dump({
-                    'question': question,
-                    'response': response,
-                    'timestamp': time.time(),
-                    'elapsed': elapsed
-                }, f)
-                
+
+        try:           
+            response = self.chain.invoke(question) 
             return response
-            
+
         except Exception as e:
             error_msg = "Desculpe, ocorreu um erro. Por favor, tente novamente."
             print(f"Erro no chat: {str(e)}")
             traceback.print_exc()
             return error_msg
+
 
 
 # Exemplo de uso
