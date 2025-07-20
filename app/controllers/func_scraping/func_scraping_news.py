@@ -39,7 +39,7 @@ def raspar_noticias(url):
         if not corpo:
             return f"[⚠️] Conteúdo não encontrado em: {url}"
 
-        return f"{titulo_texto}\n{data_texto}\n\n{corpo}"
+        return f"Conteúdo tipo: Notícia\n Título: {titulo_texto} Data: \n{data_texto}\n\nConteúdo: {corpo}"
 
     except requests.exceptions.RequestException as e:
         return f"[Erro de requisição] {e}"

@@ -15,48 +15,40 @@ def raspar_texto_generic(url):
     try:
         headers = {"User-Agent": os.getenv("USER_AGENT", "projetoIntegrador/1.0")}
 
-        # Tenta fazer a requisição para a URL
-        response = requests.get(url, headers=headers, timeout=10)  # ⛑️ Adiciona timeout para evitar travamentos
-
-        # Verifica se o status da resposta é sucesso (200)
+        response = requests.get(url, headers=headers, timeout=10)
         response.raise_for_status()
-
-        # Converte HTML para objeto BeautifulSoup
         soup = BeautifulSoup(response.content, 'html.parser')
 
         # Remove tags que não queremos processar
         for tag in soup.find_all(['script', 'style', 'nav', 'footer', 'header', 'form']):
             tag.decompose()
 
-        textos_unicos = set()  # Evita texto duplicado
+        textos_unicos = set()
         resultados = []
 
-        # Define a ordem de prioridade das tags de texto
-        ordem_tags = ['h1', 'h2', 'h3', 'h4', 'p', 'li']
+        
+        # Define as tags de texto relevantes
+        tags_relevantes = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'li', 'span', 'div'] # Adicione outras tags se for relevante, como 'span', 'div' se contiverem texto principal
 
-        for tag_name in ordem_tags:
-            for tag in soup.find_all(tag_name):
-                texto = limpar_texto(tag.get_text())
+        # Encontra TODAS as tags relevantes na ordem em que aparecem no documento
+        # Isso preserva a ordem natural do HTML
+        for tag in soup.find_all(tags_relevantes):
+            texto = limpar_texto(tag.get_text())
 
-                # Evita textos curtos (como links ou itens vazios)
-                if len(texto) > 40:
-                    hash_texto = hashlib.md5(texto.encode('utf-8')).hexdigest()
+            # Considera o texto apenas se for suficientemente longo e não um link órfão
+            # Tente aumentar o limite de 10 se ainda pegar muito lixo
+            if len(texto) > 10 and not tag.name == 'a': # Exemplo: Ignora se for uma tag <a>, a menos que o texto seja muito grande
+                hash_texto = hashlib.md5(texto.encode('utf-8')).hexdigest()
 
-                    # Garante que o texto ainda não foi adicionado
-                    if hash_texto not in textos_unicos:
-                        textos_unicos.add(hash_texto)
-                        resultados.append(texto)
+                if hash_texto not in textos_unicos:
+                    textos_unicos.add(hash_texto)
+                    resultados.append(texto)
+        
 
-        # Junta os textos formatados com espaçamento entre eles
         texto_formatado = "\n\n".join(resultados)
-
-        # Retorna o conteúdo limpo e formatado
         return texto_formatado
 
     except requests.exceptions.RequestException as e:
-        # ⚠️ Tratamento de erro de conexão, URL inválida, timeout, etc.
         return f"Erro de requisição: {e}"
-
     except Exception as e:
-        # ⚠️ Tratamento de erro inesperado (ex: falha ao processar HTML)
         return f"Erro inesperado: {e}"

@@ -1,7 +1,61 @@
-Redes sociais do Programa Jovem Programador mostre os links
-facebook: https://www.facebook.com/programajovemprogramador
-instagran: https://www.facebook.com/programajovemprogramador
-linkedin: https://www.facebook.com/programajovemprogramador
-tiktok: https://www.tiktok.com/@jovemprogramador_sc
+O Projeto Jovem Programador também pode ser chamado de PJP.
 
- O Projeto Jovem Programador também pode ser chamado de PJP.
+Redes sociais do Programa Jovem Programador mostre os links ou até mesmo crie um link html direcionando para a página em _blank.
+Se pergunda uma redes social especifica responda individualmente.
+https://www.facebook.com/programajovemprogramador
+https://www.instagram.com/programa_jovemprogramador
+https://www.linkedin.com/company/programajovemprogramador/posts/?feedView=all
+https://www.tiktok.com/@jovemprogramador_sc
+
+
+Confira os telefones disponíveis por cidade onde tem unidades do Programa Jovem Programador são Unidades do Senac/SC
+
+📍 Região Sul de Santa Catarina:
+
+Araranguá: (48) 3522-1192
+Biguaçu: (48) 3292-3203
+Criciúma: (48) 3437-9801
+Tubarão: (48) 3621-0055
+
+📍 Região da Grande Florianópolis - Santa Catarina
+
+Florianópolis: (48) 3229-3200
+Palhoça: (48) 3229-5100
+
+📍 Região do Vale do Itajaí - Santa Catarina
+
+Blumenau: (47) 3035-9999
+Brusque: (47) 3351-2626
+Itajaí: (47) 3341-6666
+Rio do Sul: (47) 3521-2065
+
+📍 Região Norte e Nordeste - Santa Catarina
+
+Jaraguá do Sul: (47) 3275-8400
+Joinville: (47) 3431-6666
+São Bento do Sul: (47) 3621-0055
+
+📍 Região Serrana e Meio-Oeste - Santa Catarina
+
+Lages: (49) 3289-2066
+São Joaquim: (49) 3231-0006
+Videira: (49) 3566-0199
+Caçador: (49) 3521-9357
+Fraiburgo: (49) 3714-5550
+Curitibanos: (49) 3241-2403
+Campos Novos: (49) 3541-2100
+Joaçaba: (49) 3521-0066
+Xanxerê: (49) 3433-3300
+
+📍 Oeste e Extremo-Oeste - Santa Catarina
+
+Chapecó: (49) 3361-5099
+Concórdia: (49) 3442-2993
+São Miguel do Oeste: (49) 3621-0055
+Porto União: (49) 3522-4066
+Canoinhas: (49) 3622-4283
+
+Linguagens de Programação nas Unidades
+As linguagens de programação ensinadas em cada unidade serão definidas conforme as necessidades das empresas locais e a demanda por profissionais de tecnologia em cada região.
+
+Na unidade de Palhoça, a linguagem ensinada em 2025 será Python.

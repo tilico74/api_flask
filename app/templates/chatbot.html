@@ -2,16 +2,13 @@
 
 {% block title %}Chatbot PJP{% endblock %}
 
-
 {% block content %}
 <div class="container py-4">
     <div class="text-white">
         <h1 class="text-center text-white mb-4">Chatbot</h1>
 
         <div class="row justify-content-center py-2 text-white" style="min-height: 75vh;">
-
             <div class="col-12 col-md-10 col-lg-10">
-
                 <!-- Área de Resposta -->
                 <div class="border border-secondary-subtle rounded overflow-auto p-3" style="height: 60vh;"
                     id="resposta">
@@ -24,37 +21,92 @@
                         <input type="text" class="form-control bg-white text-white" id="pergunta"
                             placeholder="Digite sua pergunta..." style="--bs-bg-opacity: .6;">
                         <button class="btn btn-primary border-white" onclick="enviarPergunta()">Perguntar</button>
+                        <button id="toggle-voz" class="btn btn-sm btn-outline-light">🔈 Voz: Ativada</button>
+
                     </div>
                 </div>
-
             </div>
-
         </div>
-
     </div>
 </div>
 
-
+<!-- JavaScript para enviar pergunta -->
 <script>
     async function enviarPergunta() {
         const pergunta = document.getElementById("pergunta").value;
         const respostaDiv = document.getElementById("resposta");
-        respostaDiv.textContent = "Carregando resposta...";
+        respostaDiv.textContent = "⌛ Processando...";
 
         try {
             const response = await fetch("/pergunta/", {
                 method: "POST",
                 headers: {
-                    "Content-Type": "application/json",
+                    "Content-Type": "application/json"
                 },
-                body: JSON.stringify({ pergunta: pergunta })
+                body: JSON.stringify({ pergunta })
             });
 
             const data = await response.json();
             respostaDiv.textContent = data.resposta || data.erro;
+
         } catch (error) {
-            respostaDiv.textContent = "Erro ao enviar pergunta: " + error;
+            respostaDiv.textContent = "❌ Erro ao enviar pergunta: " + error;
         }
     }
 </script>
+
+<script>
+
+    // Controle global da voz
+    let vozAtiva = true;
+
+    // Função que realiza a fala com SpeechSynthesis
+    function falar(texto) {
+        if ('speechSynthesis' in window && vozAtiva && texto.trim() !== "") {
+            // Cancela qualquer fala anterior
+            speechSynthesis.cancel();
+
+            const fala = new SpeechSynthesisUtterance(texto);
+            fala.lang = 'pt-BR';      // Português Brasil
+            fala.pitch = 1.2;         // Tom da voz
+            fala.rate = 1;            // Velocidade
+            fala.volume = 1;          // Volume máximo
+
+            speechSynthesis.speak(fala);
+        }
+    }
+
+    // Executa quando a página estiver totalmente carregada
+    document.addEventListener("DOMContentLoaded", () => {
+        const respostaDiv = document.getElementById("resposta");
+        const toggleVozBtn = document.getElementById("toggle-voz");
+
+        // Verifica se o botão de voz existe antes de usar
+        if (toggleVozBtn) {
+            toggleVozBtn.addEventListener("click", () => {
+                vozAtiva = !vozAtiva;
+                toggleVozBtn.textContent = vozAtiva
+                    ? "🔈 Voz: Ativada"
+                    : "🔇 Voz: Desativada";
+            });
+        }
+
+        // Se houver conteúdo na resposta, já fala ao carregar
+        if (respostaDiv) {
+            falar(respostaDiv.textContent);
+
+            // Observa alterações no conteúdo da resposta
+            const observer = new MutationObserver(() => {
+                falar(respostaDiv.textContent);
+            });
+
+            observer.observe(respostaDiv, {
+                childList: true,
+                characterData: true,
+                subtree: true
+            });
+        }
+    });
+</script>
+
 {% endblock %}

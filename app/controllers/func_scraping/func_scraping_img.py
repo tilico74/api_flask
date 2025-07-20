@@ -50,7 +50,7 @@ def raspar_imagens_por_tipo(url: str, tipo: str):
 
         # Retorna os resultados ou uma mensagem se nada foi encontrado
         if alts:
-            return f"Estas são as empresas {tipo.capitalize()} do Projeto Jovem Programador: " + ", ".join(alts) + ".\n\n"
+            return f"Estas são as empresas {tipo.capitalize()} do Projeto Jovem Programador ou 'PJP': " + ", ".join(alts) + ".\n\n"
         
         else:
             return f"Nenhuma imagem com alt encontrada para '{tipo}' em {url}"
